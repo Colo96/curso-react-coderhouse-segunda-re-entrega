@@ -1,0 +1,12 @@
+.container{
+    background-color: lightblue;
+}
+
+.nav__list{
+    list-style: none;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: black;
+}
