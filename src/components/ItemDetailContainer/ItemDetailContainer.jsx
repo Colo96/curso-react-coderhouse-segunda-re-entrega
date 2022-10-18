@@ -18,7 +18,7 @@ export const ItemDetailContainer = () => {
             }, 3000);
         });
         getData.then(res => setData(res.find(film => film.id === parseInt(detalleId))));
-    }, []);
+    }, [detalleId]);
 
     return(
        <ItemDetail data={data}/>

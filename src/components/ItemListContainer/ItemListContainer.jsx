@@ -1,6 +1,5 @@
 import './ItemListContainer.css';
 import React, { useState, useEffect } from 'react';
-import { ItemCount } from '../ItemCount/ItemCount';
 import { ItemList } from '../ItemList/ItemList';
 import { listaPeliculas } from '../baseDatos/baseDatos';
 import { useParams } from 'react-router-dom';
@@ -28,14 +27,9 @@ export const ItemListContainer = () => {
 
     }, [categoriaId]);
 
-    const onAdd = (quantity) => {
-       console.log(`Compraste ${quantity} items`);
-    }
-
     return(
         <>
           <h1>Hola</h1>
-          <ItemCount initial={1} stock={5} onAdd={onAdd}/>
           <ItemList data={data}/>
         </>
     );
