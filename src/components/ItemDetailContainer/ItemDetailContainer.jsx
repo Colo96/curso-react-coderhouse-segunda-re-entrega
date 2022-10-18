@@ -1,23 +1,23 @@
 import './ItemDetailContainer.css';
 import React, {useState, useEffect} from 'react';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import { listaPeliculas } from '../baseDatos/baseDatos';
 
-const film = {
-    id:1,
-    image:"https://hbomax-images.warnermediacdn.com/images/GYGP7pwQv_ojDXAEAAAFc/tileburnedin?size=1280x720&partner=hbomaxcom&language=es-419&v=a286f1df6bfcc7903f33b83456e214c8&host=art-gallery-latam.api.hbo.com&w=1280",
-    title:"Iterestellar"
-}
+const films = listaPeliculas;
 
 export const ItemDetailContainer = () => {
     const [data, setData] = useState({});
 
+    const {detalleId} = useParams();
+
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
-                resolve(film);
-            });
-        }, 3000);
-        getData.then(res => setData(res));
+                resolve(films);
+            }, 3000);
+        });
+        getData.then(res => setData(res.find(film => film.id === parseInt(detalleId))));
     }, []);
 
     return(
