@@ -27,7 +27,7 @@ export const NavBar = () => {
                      </NavLink>
                   </li>
               </ul>
-          </nav>
+            </nav>
         </div>
     );
 }

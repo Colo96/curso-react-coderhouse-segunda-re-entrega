@@ -24,5 +24,10 @@ export const listaPeliculas = [
         image:"https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2019/10/22/breakingBad.jpg",
         category: "series",
         title:"Breaking Bad"
+    },{
+        id:6,
+        image:"https://elvortex.com/wp-content/uploads/2021/12/halo5-1280_0.jpg",
+        category: "series",
+        title:"Halo"
     }
 ];

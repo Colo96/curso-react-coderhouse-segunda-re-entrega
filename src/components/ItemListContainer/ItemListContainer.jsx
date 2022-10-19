@@ -16,7 +16,7 @@ export const ItemListContainer = () => {
        const getData = new Promise(resolve => {
         setTimeout(() => {
            resolve(films);
-        }, 3000);
+        }, 1000);
        });
 
        if(categoriaId){
@@ -28,9 +28,8 @@ export const ItemListContainer = () => {
     }, [categoriaId]);
 
     return(
-        <>
-          <h1>Hola</h1>
+        <div className="containerItemList">
           <ItemList data={data}/>
-        </>
+        </div>
     );
 }
