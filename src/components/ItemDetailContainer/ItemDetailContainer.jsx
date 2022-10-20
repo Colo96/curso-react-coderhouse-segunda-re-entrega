@@ -21,6 +21,8 @@ export const ItemDetailContainer = () => {
     }, [detalleId]);
 
     return(
-        <ItemDetail data={data}/>
+        <div className="containerItemDetail">
+          <ItemDetail data={data}/>
+        </div>
     );
 }
